@@ -1,26 +1,77 @@
 {
   "ecommerceData": [
     {
-      "id": "10",
-      "user_name": "Dummy_name",
-      "user_password": "dummy_password",
-      "user_email": "dummy_email",
-      "user_phone": "dummy_phone"
-    },
-    {
       "id": "8ee7",
-      "user_name": "ajay",
-      "user_email": "2121@gmail.com",
-      "user_phone": "33e",
-      "user_password": "mishra"
+      "user_name": "ajay kumar mishra",
+      "user_email": "ajay@gmail.com",
+      "user_phone": "121212121212",
+      "user_password": "kumar ajay"
     },
     {
       "id": "527c",
-      "user_name": "dev",
-      "user_email": "dev@gmail.com",
-      "user_phone": "8888888888",
-      "user_password": "kumar@123"
+      "user_name": "dev KUMAR SINGH",
+      "user_email": "devK@gmail.com",
+      "user_phone": "7777777777",
+      "user_password": "DEVWATI111"
     }
   ],
-  "adminData": []
+  "adminData": [
+    {
+      "user_email": "dummy@gmail.com",
+      "password": "dummy_password",
+      "id": "9a31"
+    }
+  ],
+  "course": [
+    {
+      "id": "1",
+      "course_name": "Software Testing",
+      "course_description": "Software testing course is more of job oriented training which is designed as per current industry standards. You can start IT industry with basic and advance skills. Course will be trained by top industry experts who have passion to train students and help them get job in IT industry or excel in IT industry."
+    },
+    {
+      "id": "2",
+      "course_name": "Core Java and Selenium",
+      "course_description": "This course is designed for all manual testers who wants to upgrade their skills to automation. Course will be trained by top industry experts who have passion to train students and help then upgrade their skills level."
+    },
+    {
+      "id": "3",
+      "course_name": "SDET",
+      "course_description": "SDET course is more of job oriented training which is designed as per current industry standards. You can start IT industry with basic and advance skills. Course will be trained by top industry experts who have passion to train students and help them get job in IT industry or excel in IT industry."
+    },
+    {
+      "id": "4",
+      "course_name": "Python - Selenium",
+      "course_description": "This course is designed for all manual testers who wants to upgrade their skills to automation. Course will be trained by top industry experts who have passion to train students and help then upgrade their skills level."
+    },
+    {
+      "id": "5",
+      "course_name": "ISTQB",
+      "course_description": "The Foundation Level qualification is aimed at professionals who need to demonstrate practical knowledge of the fundamental concepts of software testing. This includes people in roles such as test designers, test analysts, test engineers, test consultants, test managers, user acceptance testers and IT Professionals."
+    },
+    {
+      "id": "6",
+      "course_name": "API Testing",
+      "course_description": "API testing course designed for those who are interested in API testing and want to learn more about middle ware testing. This also gives different types of testing methodologies with respect to API testing with different types of API’s."
+    },
+    {
+      "id": "7",
+      "course_name": "Performance Testing",
+      "course_description": "Performance testing is crucial for the success of businesses being an important phase in the testing life cycle. It helps one know the behaviors of applications under load conditions. Performance should not lie in (the eye of the beholder) or in other words, an application should be perceived objectively by all its end users."
+    },
+    {
+      "id": "8",
+      "course_name": "C,C++ Programming",
+      "course_description": "This course will teach you the fundamentals of the C & C++ programming language with a focus on Modern C & C++ features and the efficient use of tools. Start with the fundamentals and work your way up to advanced C++11 and latest concepts and OOP mastery!"
+    },
+    {
+      "id": "9",
+      "course_name": "DevOps",
+      "course_description": "DevOps is not a tool or a team, it is the process or a methodology of using various tools to solve the problems between Developers and Operations team, hence the term “Dev-Ops”. The development team always had the pressure of completing the old, pending work that was considered faulty by the operations team. With DevOps, there is no wait time to deploy the code and getting it tested. Hence, the developer gets instantaneous feedback on the code, and therefore can close the bugs, and can make the code production ready faster!"
+    },
+    {
+      "id": "10",
+      "course_name": "Project",
+      "course_description": "Manual Testing Live Project Training provides through exposure on both Hybrid as well as Agile process models. It covers all the End-To-End process milestone to accomplish the project Productively & Successfully."
+    }
+  ]
 }

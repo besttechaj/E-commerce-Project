@@ -6,17 +6,21 @@ import SignUp from './Components/SignUp/SignUp';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Blocks from './Components/Blocks/Blocks';
-import Course from './Components/Course/Course';
+import Courses from './Components/Courses/Courses';
 import Article from './Components/Articles/Article';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import Admin from './Components/Admin/Admin';
 import { UserContext_Provider } from './context/UserContext';
 import reducerFn from './reducer/CustomerReducer/CustomerReducer';
+import Read from './Components/CrudController/Read/Read';
+import Update from './Components/CrudController/Update/Update';
 
 export default function App() {
   //* reducer : manage user data
   let [state, dispatch] = useReducer(reducerFn, {
     details: [],
+    Courses: [],
+    readData: [],
   });
 
   return (
@@ -30,9 +34,14 @@ export default function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/blocks' element={<Blocks />} />
-            <Route path='/course' element={<Course />} />
+            <Route path='/courses' element={<Courses />} />
             <Route path='/articles' element={<Article />} />
-            <Route path='/admin' element={<Admin />} />
+            {/* nested routing  */}
+            <Route path='/admin' element={<Admin />}>
+              <Route path='/admin/read/:id' element={<Read />} />
+              <Route path='/admin/update/:id' element={<Update />} />
+            </Route>
+
             <Route path='*' element={<PageNotFound />} />
           </Routes>
           <Footer />

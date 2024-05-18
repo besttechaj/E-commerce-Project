@@ -1,13 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
 const Admin = () => {
   let { state, dispatch } = useContext(UserContext);
 
+  let [modal, setModal] = useState(false);
+  console.log(modal);
+
   useEffect(() => {
-    console.log('running');
+    console.log('useEffect');
+
     axios.get(`http://localhost:3000/ecommerceData`).then(
       (d) => {
         dispatch({
@@ -17,10 +21,10 @@ const Admin = () => {
       },
       (e) => console.log(e)
     );
-  }, []);
+  }, [dispatch]);
 
-  return (
-    console.log(state),
+  let target =
+    (console.log('running temp'),
     (
       <>
         <div>
@@ -42,7 +46,9 @@ const Admin = () => {
             </thead>
             <tbody>
               {state.details.map((v, i) => {
-                console.log(v);
+                {
+                  /* console.log(v); */
+                }
                 let { id, user_name, user_email, user_password, user_phone } =
                   v;
 
@@ -54,14 +60,24 @@ const Admin = () => {
                       <td>{user_email}</td>
                       <td>{user_password}</td>
                       <td>{user_phone}</td>
-
                       <td>
-                        <NavLink to={`read/${id}`}>
+                        {/* //! read account  */}
+                        <NavLink
+                          to={`read/${id}`}
+                          onClick={() => setModal(true)}
+                        >
                           Read Account Details
                         </NavLink>
-                        <NavLink to={`update/${id}`}>
+
+                        {/* //! update account  */}
+                        <NavLink
+                          to={`update/${id}`}
+                          onClick={() => setModal(true)}
+                        >
                           Update Account Details
                         </NavLink>
+
+                        {/* //! delete account  */}
                         <NavLink
                           onClick={() => {
                             axios
@@ -87,8 +103,9 @@ const Admin = () => {
           </table>
         </div>
       </>
-    )
-  );
+    ));
+
+  return modal ? <Outlet /> : target;
 };
 
 export default Admin;

@@ -11,7 +11,7 @@ export default function Navbar() {
               <NavLink to='/'>Home</NavLink>
             </li>
             <li>
-              <NavLink to='/course'>Course</NavLink>
+              <NavLink to='/courses'>Course</NavLink>
             </li>
             <li>
               <NavLink to='/blocks'>Blocks</NavLink>
