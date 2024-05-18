@@ -1,0 +1,26 @@
+{
+  "ecommerceData": [
+    {
+      "id": "10",
+      "user_name": "Dummy_name",
+      "user_password": "dummy_password",
+      "user_email": "dummy_email",
+      "user_phone": "dummy_phone"
+    },
+    {
+      "id": "8ee7",
+      "user_name": "ajay",
+      "user_email": "2121@gmail.com",
+      "user_phone": "33e",
+      "user_password": "mishra"
+    },
+    {
+      "id": "527c",
+      "user_name": "dev",
+      "user_email": "dev@gmail.com",
+      "user_phone": "8888888888",
+      "user_password": "kumar@123"
+    }
+  ],
+  "adminData": []
+}

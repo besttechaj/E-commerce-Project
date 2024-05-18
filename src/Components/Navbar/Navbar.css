@@ -1,0 +1,25 @@
+.navbar_outer {
+  border: 2px solid red;
+}
+
+.navbar_inner {
+  padding: 0.5rem;
+}
+
+.navbar_inner > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbar_inner ul li {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.navbar_inner ul li a {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
