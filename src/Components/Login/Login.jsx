@@ -28,26 +28,29 @@ const Login = () => {
 
   return (
     <div className='login'>
-      <h1>Login Page</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type='email'
-          name='user_email'
-          id='user_email'
-          placeholder='Enter your Email'
-          onChange={handleChange}
-          value={user.user_email}
-        />
+      <div className='login_inner'>
+        <h1>Login Page</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type='email'
+            name='user_email'
+            id='user_email'
+            placeholder='Enter your Email'
+            onChange={handleChange}
+            value={user.user_email}
+          />
 
-        <input
-          type='password'
-          name='user_password'
-          id='user_password'
-          placeholder='Enter your Password'
-          onChange={handleChange}
-          value={user.user_password}
-        />
-      </form>
+          <input
+            type='password'
+            name='user_password'
+            id='user_password'
+            placeholder='Enter your Password'
+            onChange={handleChange}
+            value={user.user_password}
+          />
+          <button type='submit'>Login</button>
+        </form>
+      </div>
     </div>
   );
 };
