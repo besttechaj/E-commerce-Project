@@ -5,6 +5,7 @@ import { UserContext } from '../../context/UserContext';
 import CourseCard from '../CourseCard/CourseCard';
 
 const Course = () => {
+
   let { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Course = () => {
     // console.log(state.Courses),
     <>
       <h1>Courses Offered by Our Institutes !!</h1>
-      <div>
+      <div className='course_container'>
         {state.Courses.map((v, i) => {
           let { id, course_name, course_description } = v;
           return (
