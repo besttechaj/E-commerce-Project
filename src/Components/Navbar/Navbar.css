@@ -1,4 +1,4 @@
-.navbar_outer {
+/* .navbar_outer {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -22,4 +22,37 @@
 .navbar_inner ul li a {
   text-decoration: none;
   font-size: 0.9rem;
+} */
+
+.navbar_outer {
+  background-color: #333; /* Background color of the outer navbar */
+  padding: 10px 0; /* Padding around the outer navbar */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.navbar_inner {
+  max-width: 1200px; /* Maximum width of the inner navbar */
+  margin: 0 auto; /* Center the inner navbar horizontally */
+}
+
+ul {
+  list-style-type: none; /* Remove bullets from the list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox layout for navbar items */
+}
+
+li {
+  margin-right: 10px; /* Margin between navbar items */
+}
+
+a {
+  color: #fff; /* Text color of navbar links */
+  text-decoration: none; /* Remove underline from links */
+  padding: 8px 12px; /* Padding around navbar links */
+  border-radius: 5px; /* Add some rounded corners to links */
+}
+
+a:hover {
+  background-color: #555; /* Background color of navbar links on hover */
 }

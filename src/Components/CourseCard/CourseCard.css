@@ -1,4 +1,4 @@
-.courseCard_outer {
+/* .courseCard_outer {
   border: 2px solid yellow;
   width: 20%;
   padding: 0.5rem;
@@ -14,4 +14,48 @@
 
 #btn_batches {
   background-color: #afcade;
+} */
+
+.courseCard_outer {
+  background-color: #f5f5f5; /* Background color of the card */
+  border-radius: 8px; /* Border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+  padding: 20px; /* Padding around the card content */
+  margin-bottom: 20px; /* Margin between cards */
+}
+
+.courseCard_outer h3 {
+  margin-top: 0; /* Remove top margin from heading */
+  color: #333; /* Text color of the heading */
+}
+
+.courseCard_inner1 {
+  margin-top: 10px; /* Add some space between heading and description */
+  color: #666; /* Text color of the description */
+}
+
+.courseCard_inner2 {
+  margin-top: 20px; /* Add some space between description and buttons */
+}
+
+#btn_details,
+#btn_enroll,
+#btn_batches {
+  background-color: #007bff; /* Background color of the buttons */
+  color: #fff; /* Text color of the buttons */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Border radius for rounded corners */
+  padding: 8px 16px; /* Padding around the buttons */
+  margin-right: 10px; /* Margin between buttons */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+#btn_enroll {
+  background-color: #ff9800;
+}
+
+#btn_details:hover,
+#btn_enroll:hover,
+#btn_batches:hover {
+  background-color: #0056b3; /* Darker background color on hover */
 }

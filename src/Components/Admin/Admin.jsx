@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from '../../context/UserContext';
+import './Admin.css';
 const Admin = () => {
   let { state, dispatch } = useContext(UserContext);
 

@@ -5,6 +5,12 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   let navigate = useNavigate();
 
+  //* declaring error
+  const [errors, setErrors] = useState({
+    email: '',
+    password: '',
+  });
+
   //* Declaring state
   let [user, setUser] = useState({
     user_email: '',
@@ -19,7 +25,30 @@ const Login = () => {
   //* submit event
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
+
+    // Validation using regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let newErrors = {};
+
+    if (!user.user_email.trim() || !emailRegex.test(user.user_email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    if (!user.user_password.trim()) {
+      newErrors.password = 'Password is required';
+    }
+
+    setErrors(newErrors);
+
+    // If there are no errors, submit the form
+    if (Object.keys(newErrors).length === 0) {
+      // Submit the form
+      console.log('Form submitted:', user);
+      // Reset form data
+      setUser({
+        user_email: '',
+        user_password: '',
+      });
+    }
   };
 
   //todo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -58,7 +87,7 @@ const Login = () => {
               onChange={handleChange}
               value={user.user_email}
             />
-
+            {errors.email && <span>{errors.email}</span>}
             <input
               type='password'
               name='user_password'
@@ -67,7 +96,7 @@ const Login = () => {
               onChange={handleChange}
               value={user.user_password}
             />
-
+            {errors.password && <span>{errors.password}</span>}
             <button type='submit'>Login</button>
             <br />
             <p>Forgot password ?</p>
