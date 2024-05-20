@@ -27,3 +27,65 @@
   justify-content: center;
   align-items: center;
 }
+
+.signup_inner2A {
+  /* border: 2px solid red; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+.signup_inner2A > .btnCombo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid rgb(236, 235, 235);
+  margin-bottom: 1rem;
+  padding: 0.7rem 0rem;
+  padding-bottom: 0;
+  gap: 1rem;
+}
+
+.btnCombo > .btn {
+  padding: 0.5rem;
+  border: none;
+  background-color: #fff;
+  color: #023c44;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.btnCombo > .btn:hover {
+  background-color: rgb(225, 222, 222);
+}
+
+.signup_inner2A > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup_inner2A > form > input {
+  height: 2.7rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.signup_inner2A > form > .signup_inner3 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.signup_outer > .signup_inner2 > .signup_inner2A > form > button {
+  width: 50%;
+  /* margin: auto; */
+  height: 2.5rem;
+  background-color: #d23228;
+  color: white;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  font-size: 1rem;
+}

@@ -35,7 +35,7 @@ const Login = () => {
       <div className='login_inner1'>
         <h1>
           Start Learning with
-          <span style={{ color: '#03c7e8' }}>Qspider</span>.
+          <span style={{ color: '#03c7e8' }}> Qspider</span>.
         </h1>
       </div>
       <div className='login_inner2'>
