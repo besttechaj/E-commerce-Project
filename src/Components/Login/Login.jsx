@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './Login.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext';
 const Login = () => {
   let navigate = useNavigate();
 
@@ -42,7 +43,8 @@ const Login = () => {
     // If there are no errors, submit the form
     if (Object.keys(newErrors).length === 0) {
       // Submit the form
-      console.log('Form submitted:', user);
+      VerifyingUser();
+      // console.log('Form submitted:', user);
       // Reset form data
       setUser({
         user_email: '',
@@ -52,9 +54,31 @@ const Login = () => {
   };
 
   //todo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  let { dispatch } = useContext(UserContext);
+
   const VerifyingUser = () => {
-    axios.get(``).then(
-      (d) => console.log(d),
+    axios.get(`http://localhost:3000/ecommerceData`).then(
+      (d) => {
+        let temp = [...d.data];
+        console.log(temp);
+
+        let res = temp.includes(user.user_email);
+        console.log(res);
+
+        // for (let Check_email in temp) {
+        //   if (Check_email.user_email === user.user_email) {
+        //     console.log('credentials matched');
+        //     dispatch({
+        //       type: 'USER_LOGGEDIN',
+        //     });
+        //     return navigate('');
+        //   } else {
+        //     alert(
+        //       'Credentials are not matching, please create a new account if you are a new user'
+        //     );
+        //   }
+        // }
+      },
       (e) => console.log(e)
     );
   };

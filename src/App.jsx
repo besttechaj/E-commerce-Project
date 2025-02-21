@@ -21,6 +21,8 @@ export default function App() {
     details: [],
     Courses: [],
     readData: [],
+    admin_loggedIn: false,
+    user_loggedIn: false,
   });
 
   return (

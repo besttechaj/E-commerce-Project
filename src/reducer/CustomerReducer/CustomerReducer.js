@@ -14,6 +14,10 @@ export default function reducerFn(state, action) {
     case 'FETCH_COURSE':
       return { ...state, Courses: action.payload };
 
+    //* user logged-in
+    case 'USER_LOGGEDIN':
+      return { ...state, user_loggedIn: !state.user_loggedIn };
+
     default:
       state;
   }
